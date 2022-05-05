@@ -1,8 +1,12 @@
 import './index.scss';
 import Logo from '../src/img/logo.png';
+import One from '../src/img/sneakers/photo1.png';
+import Two from '../src/img/sneakers/photo2.png';
+import Three from '../src/img/sneakers/photo3.png';
 import 'macro-css';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import PersonOutlineOutlinedIcon from '@mui/icons-material/PersonOutlineOutlined';
+import AddIcon from '@mui/icons-material/Add';
 
 const App = () => {
     return (
@@ -25,9 +29,50 @@ const App = () => {
                     </li>
                 </ul>
             </header>
-            <div className='content'>
+            <div className='content p-20'>
                 <h1>Все кроссовки</h1>
-                ....
+
+                <div className='containerCards d-flex justify-between'>
+                    <div className='card'>
+                        <img width={250} src={One} alt='photo1' />
+                        <p>Кроссовки Fresh Foam X 1080v12</p>
+                        <div className='d-flex justify-between'>
+                            <div className='infoCard'>
+                                <span>Цена:</span>
+                                <b>$159.99</b>
+                            </div>
+                            <button>
+                                <AddIcon />
+                            </button>
+                        </div>
+                    </div>
+                    <div className='card'>
+                        <img width={250} src={Two} alt='photo1' />
+                        <p>Кроссовки Fresh Roav Foam</p>
+                        <div className='d-flex justify-between'>
+                            <div className='infoCard'>
+                                <span>Цена:</span>
+                                <b>$84.99</b>
+                            </div>
+                            <button>
+                                <AddIcon />
+                            </button>
+                        </div>
+                    </div>
+                    <div className='card'>
+                        <img width={250} src={Three} alt='photo1' />
+                        <p>Кроссовки Fresh Foam X 880v12</p>
+                        <div className='d-flex justify-between'>
+                            <div className='infoCard'>
+                                <span>Цена:</span>
+                                <b>$134.99</b>
+                            </div>
+                            <button>
+                                <AddIcon />
+                            </button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     );
