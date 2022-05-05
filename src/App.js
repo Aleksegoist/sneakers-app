@@ -3,6 +3,8 @@ import Logo from '../src/img/logo.png';
 import One from '../src/img/sneakers/photo1.png';
 import Two from '../src/img/sneakers/photo2.png';
 import Three from '../src/img/sneakers/photo3.png';
+import HeartUnliked from '../src/img/heart_unliked.svg';
+import BtnRemove from '../src/img/btn_remove.svg';
 import 'macro-css';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import PersonOutlineOutlinedIcon from '@mui/icons-material/PersonOutlineOutlined';
@@ -13,6 +15,33 @@ import { red } from '@mui/material/colors';
 const App = () => {
     return (
         <div className='wrapper clear'>
+            <div className='overlay'>
+                <div className='drawer'>
+                    <h2>Корзина</h2>
+
+                    <div className='cartItem d-flex align-center'>
+                        <img
+                            className='mr-10'
+                            width={120}
+                            src={One}
+                            alt='onePhoto'
+                        />
+                        <div className='mr-20'>
+                            <p className='mb-5'>
+                                Кроссовки Fresh Foam X 1080v12
+                            </p>
+                            <b>$159.99</b>
+                        </div>
+                        <img
+                            className='removeBtn'
+                            width={20}
+                            src={BtnRemove}
+                            alt='remove'
+                        />
+                    </div>
+                </div>
+            </div>
+
             <header className='d-flex justify-between align-center p-20'>
                 <div className='d-flex align-center'>
                     <img width={70} height={70} src={Logo} alt='logo' />
@@ -43,6 +72,13 @@ const App = () => {
 
                 <div className='containerCards d-flex justify-between'>
                     <div className='card'>
+                        <div className='favorite'>
+                            <img
+                                width={40}
+                                src={HeartUnliked}
+                                alt='heartUnliked'
+                            />
+                        </div>
                         <img width={250} src={One} alt='photo1' />
                         <p>Кроссовки Fresh Foam X 1080v12</p>
                         <div className='d-flex justify-between'>
