@@ -7,6 +7,8 @@ import 'macro-css';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import PersonOutlineOutlinedIcon from '@mui/icons-material/PersonOutlineOutlined';
 import AddIcon from '@mui/icons-material/Add';
+import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
+import { red } from '@mui/material/colors';
 
 const App = () => {
     return (
@@ -30,7 +32,14 @@ const App = () => {
                 </ul>
             </header>
             <div className='content p-20'>
-                <h1>Все кроссовки</h1>
+                <div className='d-flex align-center justify-between'>
+                    <h1>Все кроссовки</h1>
+
+                    <div className='search-block d-flex align-center'>
+                        <SearchOutlinedIcon color='disabled' />
+                        <input type='text' placeholder='Поиск...' />
+                    </div>
+                </div>
 
                 <div className='containerCards d-flex justify-between'>
                     <div className='card'>
@@ -42,7 +51,7 @@ const App = () => {
                                 <b>$159.99</b>
                             </div>
                             <button>
-                                <AddIcon />
+                                <AddIcon sx={{ color: red[700] }} />
                             </button>
                         </div>
                     </div>
@@ -55,7 +64,7 @@ const App = () => {
                                 <b>$84.99</b>
                             </div>
                             <button>
-                                <AddIcon />
+                                <AddIcon sx={{ color: red[700] }} />
                             </button>
                         </div>
                     </div>
@@ -68,7 +77,7 @@ const App = () => {
                                 <b>$134.99</b>
                             </div>
                             <button>
-                                <AddIcon />
+                                <AddIcon sx={{ color: red[700] }} />
                             </button>
                         </div>
                     </div>
