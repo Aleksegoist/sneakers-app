@@ -1,24 +1,33 @@
 import './index.scss';
+import Logo from '../src/img/logo.png';
+import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
+import PersonOutlineOutlinedIcon from '@mui/icons-material/PersonOutlineOutlined';
 
 const App = () => {
     return (
         <div className='wrapper'>
             <header>
-                <svg />
-                <div>
-                    <h3>AY dev. SNEAKERS</h3>
-                    <p>NEW BALANCE</p>
+                <div className='headerLeft'>
+                    <img width={70} height={70} src={Logo} alt='logo' />
+                    <div className='headerInfo'>
+                        <h3>AY dev. SNEAKERS</h3>
+                        <p>NEW BALANCE</p>
+                    </div>
                 </div>
-                <ul>
+                <ul className='headerRight'>
                     <li>
-                        <svg />
+                        <ShoppingCartOutlinedIcon />
                         <span>$300</span>
                     </li>
                     <li>
-                        <svg />
+                        <PersonOutlineOutlinedIcon />
                     </li>
                 </ul>
             </header>
+            <div className='content'>
+                <h1>Все кроссовки</h1>
+                ....
+            </div>
         </div>
     );
 };
