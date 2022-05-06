@@ -18,26 +18,63 @@ const App = () => {
             <div className='overlay'>
                 <div className='drawer'>
                     <h2>Корзина</h2>
-
-                    <div className='cartItem d-flex align-center'>
-                        <img
-                            className='mr-10'
-                            width={120}
-                            src={One}
-                            alt='onePhoto'
-                        />
-                        <div className='mr-20'>
-                            <p className='mb-5'>
-                                Кроссовки Fresh Foam X 1080v12
-                            </p>
-                            <b>$159.99</b>
+                    <div className='items'>
+                        <div className='cartItem d-flex align-center mb-20'>
+                            <img
+                                className='mr-15'
+                                width={120}
+                                src={One}
+                                alt='onePhoto'
+                            />
+                            <div className='mr-20'>
+                                <p className='mb-5'>
+                                    Кроссовки Fresh Foam X 1080v12
+                                </p>
+                                <b>$159.99</b>
+                            </div>
+                            <img
+                                className='removeBtn'
+                                width={20}
+                                src={BtnRemove}
+                                alt='remove'
+                            />
                         </div>
-                        <img
-                            className='removeBtn'
-                            width={20}
-                            src={BtnRemove}
-                            alt='remove'
-                        />
+                        <div className='cartItem d-flex align-center mb-20'>
+                            <img
+                                className='mr-15'
+                                width={120}
+                                src={Two}
+                                alt='twoPhoto'
+                            />
+                            <div className='mr-20'>
+                                <p className='mb-5'>
+                                    Кроссовки Fresh Roav Foam
+                                </p>
+                                <b>$84.99</b>
+                            </div>
+                            <img
+                                className='removeBtn'
+                                width={20}
+                                src={BtnRemove}
+                                alt='remove'
+                            />
+                        </div>
+                    </div>
+
+                    <div className='cartTotalBlock'>
+                        <ul>
+                            <li>
+                                <span>Итого:</span>
+                                <div></div>
+                                <b>$350</b>
+                            </li>
+                            <li>
+                                <span>Налог НДС(20%):</span>
+                                <div></div>
+                                <b>$7</b>
+                            </li>
+                        </ul>
+                        <button>Оформить заказ</button>
                     </div>
                 </div>
             </div>

@@ -114,26 +114,55 @@ header {
 }
 
 .drawer {
+    display: flex;
+    flex-direction: column;
     position: absolute;
-    width: 385px;
+    width: 420px;
     height: 100%;
     right: 0;
     background: #FFFFFF;
     box-shadow: -10px 4px 24px rgba(0,0,0,0.1);
     padding: 30px;
-
+  
     h2 {
         margin: 0;
-    
+    }
+    .items {
+        flex: 1;
     }
 }
 
+.cartTotalBlock {
+li {
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 20px;
+  
+    div {
+        height: 1px;
+        border-bottom: 1px dashed #eaeaea;
+        position: relative;
+        top: -4px;
+        margin: 0 7px;
+     }
+}
+
+   
+}
+
 .cartItem {
+    border: 1px solid #eaeaea;
+    border-radius: 20px;
+    overflow: hidden;
+    padding: 10px;
+    margin-top: 20px;
     p {
         font-size: 16px;
     }
     .removeBtn {
-        opacity: 0.5;
+        opacity: 0.4;
+        cursor: pointer;
+        transition: opacity 0.15s ease-in-out;
         &:hover {
             opacity: 1;
         }
