@@ -11,17 +11,17 @@ import Three from '../src/img/sneakers/photo3.png';
 const arr = [
     {
         title: 'Кроссовки Fresh Foamkk X 1080v12',
-        price: '$159.99',
+        price: 159.99,
         imageUrl: One,
     },
     {
         title: 'Кроссовки Fresh Foam Roav',
-        price: '$84.99',
+        price: 84.99,
         imageUrl: Two,
     },
     {
         title: 'Кроссовки Fresh Foam X 880v12',
-        price: '$134.99',
+        price: 134.99,
         imageUrl: Three,
     },
 ];

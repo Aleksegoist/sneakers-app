@@ -15,9 +15,13 @@ const Card = (props) => {
             <div className='d-flex justify-between'>
                 <div className='infoCard'>
                     <span>Цена:</span>
-                    <b>{props.price}</b>
+                    <b>${props.price}</b>
                 </div>
-                <button>
+                <button
+                    onClick={() => {
+                        alert(props.title);
+                    }}
+                >
                     <AddIcon sx={{ color: red[700] }} />
                 </button>
             </div>
