@@ -41,55 +41,6 @@ header {
     }
 }
 
-.card {
-    border: 1px solid #eaeaea;
-    border-radius: 40px;
-    margin-top: 20px;
-    padding: 20px;
-    width: 333px;
-    transition: box-shadow 0.2s ease-in-out,
-    transform 0.2s ease-in-out;
-    cursor: pointer;
-
-&:hover {
-    box-shadow: 0px 20px 30px rgba(0,0,0,0.2);
-    transform: translateY(-5px);
-}
-
-.favorite{
-    position: absolute;
-    cursor: pointer;
-}
-
-    img {
-        display: flex;
-        align-items: center;
-        margin-left: 28px;
-     }
-     button{
-         border: none;;
-         border-radius: 4px;
-         display: flex;
-         align-items: center;
-         padding: 1px;
-         cursor: pointer;
-         background-color: #eaeaea;
-          }
-          p {
-              font-size: 20px;
-              font-weight: 600;
-          }
-}
-
-.infoCard {
-    display: flex;
-    span {
-        display: flex;
-        flex-direction: column;
-        margin-right: 10px;
-        font-weight: 700;
-    }
-}
 
 .search-block {
     border: 1px solid #eaeaea;
