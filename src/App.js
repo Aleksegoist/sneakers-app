@@ -4,6 +4,27 @@ import Header from './components/Header';
 import Drawer from './components/Drawer';
 import 'macro-css';
 import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
+import One from '../src/img/sneakers/photo1.png';
+import Two from '../src/img/sneakers/photo2.png';
+import Three from '../src/img/sneakers/photo3.png';
+
+const arr = [
+    {
+        title: 'Кроссовки Fresh Foamkk X 1080v12',
+        price: '$159.99',
+        imageUrl: One,
+    },
+    {
+        title: 'Кроссовки Fresh Foam Roav',
+        price: '$84.99',
+        imageUrl: Two,
+    },
+    {
+        title: 'Кроссовки Fresh Foam X 880v12',
+        price: '$134.99',
+        imageUrl: Three,
+    },
+];
 
 const App = () => {
     return (
@@ -21,9 +42,15 @@ const App = () => {
                 </div>
 
                 <div className='containerCards d-flex justify-between'>
-                    <Card />
-                    <Card />
-                    <Card />
+                    {arr.map((obj) => {
+                        return (
+                            <Card
+                                title={obj.title}
+                                price={obj.price}
+                                imageUrl={obj.imageUrl}
+                            />
+                        );
+                    })}
                 </div>
             </div>
         </div>
