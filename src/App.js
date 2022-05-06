@@ -17,7 +17,15 @@ const App = () => {
         <div className='wrapper clear'>
             <div className='overlay'>
                 <div className='drawer'>
-                    <h2>Корзина</h2>
+                    <h2 className='d-flex mb-30 justify-between'>
+                        Корзина{' '}
+                        <img
+                            className='cu-p'
+                            width={20}
+                            src={BtnRemove}
+                            alt='remove'
+                        />
+                    </h2>
                     <div className='items'>
                         <div className='cartItem d-flex align-center mb-20'>
                             <img
@@ -74,7 +82,7 @@ const App = () => {
                                 <b>$7</b>
                             </li>
                         </ul>
-                        <button>Оформить заказ</button>
+                        <button class='glow-on-hover'>Оформить заказ</button>
                     </div>
                 </div>
             </div>
