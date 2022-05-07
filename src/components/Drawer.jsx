@@ -17,6 +17,7 @@ const Drawer = (props) => {
                         alt='remove'
                     />
                 </h2>
+
                 <div className='items'>
                     <div className='cartItem d-flex align-center mb-20'>
                         <img

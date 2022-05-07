@@ -4,13 +4,11 @@ import Header from './components/Header';
 import Drawer from './components/Drawer';
 import 'macro-css';
 import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
-import One from '../src/img/sneakers/photo1.png';
-import Two from '../src/img/sneakers/photo2.png';
-import Three from '../src/img/sneakers/photo3.png';
 import { useEffect, useState } from 'react';
 
 const App = () => {
     const [items, setItems] = useState([]);
+    const [cartItems, setCartItems] = useState([]);
     const [cartOpened, setCartOpened] = useState(false);
 
     useEffect(() => {
