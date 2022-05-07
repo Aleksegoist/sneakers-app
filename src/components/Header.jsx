@@ -3,7 +3,7 @@ import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import PersonOutlineOutlinedIcon from '@mui/icons-material/PersonOutlineOutlined';
 import Logo from '../../src/img/logo.png';
 
-export const Header = () => {
+export const Header = (props) => {
     return (
         <header className='d-flex justify-between align-center p-20'>
             <div className='d-flex align-center'>
@@ -14,12 +14,12 @@ export const Header = () => {
                 </div>
             </div>
             <ul className='d-flex'>
-                <li className='mr-30'>
+                <li onClick={props.onClickCart} className='mr-30'>
                     <ShoppingCartOutlinedIcon />
-                    <span>$300</span>
+                    <span className='cu-p'>$300</span>
                 </li>
                 <li>
-                    <PersonOutlineOutlinedIcon />
+                    <PersonOutlineOutlinedIcon className='cu-p' />
                 </li>
             </ul>
         </header>

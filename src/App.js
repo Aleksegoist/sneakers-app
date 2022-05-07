@@ -7,31 +7,36 @@ import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
 import One from '../src/img/sneakers/photo1.png';
 import Two from '../src/img/sneakers/photo2.png';
 import Three from '../src/img/sneakers/photo3.png';
-// import { useState } from 'react';
-
-const arr = [
-    {
-        title: 'Кроссовки Fresh Foamkk X 1080v12',
-        price: 159.99,
-        imageUrl: One,
-    },
-    {
-        title: 'Кроссовки Fresh Foam Roav',
-        price: 84.99,
-        imageUrl: Two,
-    },
-    {
-        title: 'Кроссовки Fresh Foam X 880v12',
-        price: 134.99,
-        imageUrl: Three,
-    },
-];
+import { useEffect, useState } from 'react';
 
 const App = () => {
+    const [items, setItems] = useState([]);
+    const [cartOpened, setCartOpened] = useState(false);
+
+    useEffect(() => {
+        fetch('https://627678f215458100a6af8ae5.mockapi.io/items')
+            .then((res) => {
+                return res.json();
+            })
+            .then((json) => {
+                setItems(json);
+            });
+    }, []);
+
     return (
         <div className='wrapper clear'>
-            <Drawer />
-            <Header />
+            {cartOpened && (
+                <Drawer
+                    onCloseDrawer={() => {
+                        setCartOpened(false);
+                    }}
+                />
+            )}
+            <Header
+                onClickCart={() => {
+                    setCartOpened(true);
+                }}
+            />
             <div className='content p-20'>
                 <div className='d-flex align-center justify-between'>
                     <h1>Все кроссовки</h1>
@@ -42,8 +47,8 @@ const App = () => {
                     </div>
                 </div>
 
-                <div className='containerCards d-flex justify-between'>
-                    {arr.map((obj) => {
+                <div className='containerCards d-flex flex-wrap justify-between'>
+                    {items.map((obj) => {
                         return (
                             <Card
                                 title={obj.title}

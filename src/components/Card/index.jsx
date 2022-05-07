@@ -10,7 +10,7 @@ const Card = (props) => {
     const [isAdded, setIsAdded] = useState(false);
 
     const onClickPlus = () => {
-        setIsAdded(true);
+        setIsAdded(!isAdded);
     };
     console.log(isAdded);
     return (

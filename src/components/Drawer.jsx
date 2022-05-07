@@ -3,13 +3,14 @@ import One from '../../src/img/sneakers/photo1.png';
 import Two from '../../src/img/sneakers/photo2.png';
 import BtnRemove from '../../src/img/btn_remove.svg';
 
-const Drawer = () => {
+const Drawer = (props) => {
     return (
-        <div style={{ display: 'none' }} className='overlay'>
+        <div className='overlay'>
             <div className='drawer'>
                 <h2 className='d-flex mb-30 justify-between'>
                     Корзина{' '}
                     <img
+                        onClick={props.onCloseDrawer}
                         className='cu-p'
                         width={20}
                         src={BtnRemove}
