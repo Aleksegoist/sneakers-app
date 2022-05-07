@@ -1,10 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react';
 import HeartUnliked from '../../img/heart_unliked.svg';
-import AddIcon from '@mui/icons-material/Add';
-import { red } from '@mui/material/colors';
+// import AddIcon from '@mui/icons-material/Add';
+// import { red } from '@mui/material/colors';
 import cardStyles from './Card.module.scss';
+import Plus from '../../img/btnPlus.svg';
+import Check from '../../img/check.svg';
 
 const Card = (props) => {
+    const [isAdded, setIsAdded] = useState(false);
+
+    const onClickPlus = () => {
+        setIsAdded(true);
+    };
+    console.log(isAdded);
     return (
         <div className={cardStyles.card}>
             <div className='favorite' onClick={props.onFavorite}>
@@ -17,9 +25,13 @@ const Card = (props) => {
                     <span>Цена:</span>
                     <b>${props.price}</b>
                 </div>
-                <button onClick={props.onPlus}>
-                    <AddIcon sx={{ color: red[700] }} />
-                </button>
+
+                <img
+                    className={cardStyles.plus}
+                    onClick={onClickPlus}
+                    src={isAdded ? Check : Plus}
+                    alt='Plus'
+                />
             </div>
         </div>
     );
