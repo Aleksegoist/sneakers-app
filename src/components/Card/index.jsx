@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import HeartUnliked from '../../img/heart_unliked.svg';
-// import AddIcon from '@mui/icons-material/Add';
-// import { red } from '@mui/material/colors';
+import AddIcon from '@mui/icons-material/Add';
+import CheckIcon from '@mui/icons-material/Check';
+import { green } from '@mui/material/colors';
+import { red } from '@mui/material/colors';
 import cardStyles from './Card.module.scss';
-import Plus from '../../img/btnPlus.svg';
-import Check from '../../img/check.svg';
 
 const Card = (props) => {
     const [isAdded, setIsAdded] = useState(false);
@@ -26,12 +26,13 @@ const Card = (props) => {
                     <b>${props.price}</b>
                 </div>
 
-                <img
-                    className={cardStyles.plus}
-                    onClick={onClickPlus}
-                    src={isAdded ? Check : Plus}
-                    alt='Plus'
-                />
+                <div onClick={onClickPlus}>
+                    {isAdded ? (
+                        <CheckIcon sx={{ color: green[800] }} />
+                    ) : (
+                        <AddIcon sx={{ color: red[800], cursor: 'pointer' }} />
+                    )}
+                </div>
             </div>
         </div>
     );
