@@ -7,6 +7,7 @@ import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
 import One from '../src/img/sneakers/photo1.png';
 import Two from '../src/img/sneakers/photo2.png';
 import Three from '../src/img/sneakers/photo3.png';
+// import { useState } from 'react';
 
 const arr = [
     {
@@ -48,7 +49,10 @@ const App = () => {
                                 title={obj.title}
                                 price={obj.price}
                                 imageUrl={obj.imageUrl}
-                                onClick={() => console.log(obj)}
+                                onFavorite={() =>
+                                    console.log('Add to favorite')
+                                }
+                                onPlus={() => console.log('Click plus')}
                             />
                         );
                     })}

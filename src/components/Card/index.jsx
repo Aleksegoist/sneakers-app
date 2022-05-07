@@ -7,7 +7,7 @@ import cardStyles from './Card.module.scss';
 const Card = (props) => {
     return (
         <div className={cardStyles.card}>
-            <div className='favorite'>
+            <div className='favorite' onClick={props.onFavorite}>
                 <img width={40} src={HeartUnliked} alt='heartUnliked' />
             </div>
             <img width={250} src={props.imageUrl} alt='sneakers' />
@@ -17,7 +17,7 @@ const Card = (props) => {
                     <span>Цена:</span>
                     <b>${props.price}</b>
                 </div>
-                <button onClick={props.onClick}>
+                <button onClick={props.onPlus}>
                     <AddIcon sx={{ color: red[700] }} />
                 </button>
             </div>
