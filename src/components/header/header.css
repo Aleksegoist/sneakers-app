@@ -1,0 +1,40 @@
+.header {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    margin-top: 20px;
+    background-color: darkblue;
+    border-radius: 20px;
+    
+}
+
+.wrapper {
+    display: flex;
+    
+}
+
+.logo-header {
+   width: 100%;
+   display: flex;
+   align-items: center;
+   
+}
+
+.header__store-title {
+    display: flex;
+    align-items: center;
+    color: white;
+    text-decoration: underline red;
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 5px;    
+}
+
+.cart__header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-right: 20px;
+}
